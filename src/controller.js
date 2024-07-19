@@ -38,6 +38,7 @@ app.post("/incoming", async (req, res) => {
 	}
 });
 
-createServer(app).listen(80, () => {
-	console.log("Server listening on port 80");
+const PORT = process.env.PORT || 3000;
+createServer(app).listen(PORT, () => {
+	console.log(`Server listening on port ${PORT}`);
 });
